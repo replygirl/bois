@@ -1,4 +1,12 @@
+$c = v('color')
+$d = v('depth')
+$nd = n('depth')
+
+$color = black
+$depth = 1px
+
 v(x)
   var(unquote('--bois-' + x), lookup('$' + x))
 
-$color = black
+n(x)
+  'calc(-1 * %s)' % v(x)
