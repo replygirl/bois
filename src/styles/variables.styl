@@ -1,18 +1,19 @@
-$c = v('color')
-$cb = v('background-color')
-$d = v('depth')
-$dn = n('depth')
-$g = v('gap')
-$gn = n('gap')
-$g2 = n('gap', 2)
+$c = $color
+$cb = $background-color
+$d = $depth
+$dn = ca($d, '* -1')
+$g = $gap
+$gm = ca($g, '- 1px')
+$gn = ca($g, '* -1')
+$g2 = ca($g, '* 2')
 
-$background-color = white
-$color = black
-$depth = 1px
-$gap = 10px
+$background-color = v('background-color', white)
+$color = v('color', black)
+$depth = v('depth', 1px)
+$gap = v('gap', 10px)
 
-v(x)
-  var(unquote('--bois-' + x), lookup('$' + x))
+ca(val, calcFnString)
+  unquote('calc(%s %s)' % (val unquote(calcFnString)))
 
-n(x, n = -1)
-  'calc(%s * %s)' % (n v(x))
+v(name, val)
+  var(unquote('--bois-' + name), val)

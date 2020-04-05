@@ -4,15 +4,23 @@ button()
   color $c
   cursor pointer
   padding $g
-  transition()
   hover-shadow()
+  &:active
+    border-top 2px solid $c
+    border-left 2px solid $c
 
 hover-shadow()
   transition()
   @media (hover: hover)
     &:hover
-      transform translate($dn, $dn)
+      z-index 1
       box-shadow $d $d $c
+      transform translate($dn, $dn)
+  &:active
+    z-index -1
+    box-shadow none
+    padding $g $gm $gm $g
+    transform translate(0, 0)
 
 transition()
   transition all 75ms ease-out
