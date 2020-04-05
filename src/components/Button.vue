@@ -5,14 +5,13 @@
 </template>
 
 <script lang='ts'>
-import { Component, Vue } from 'vue-property-decorator'
+import { defineComponent } from 'vue'
 
-@Component
-export default class Button extends Vue {
-  onClick(): void {
+export default defineComponent({
+  onClick() {
     this.$emit('click')
   }
-}
+})
 </script>
 
 <style scoped>
