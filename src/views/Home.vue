@@ -34,7 +34,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'HelloWorld',
+  name: 'Home',
   props: {
     msg: String
   }
