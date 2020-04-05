@@ -23,5 +23,6 @@ button {
   font-size: 15pt;
   padding: 3px 10px;
   margin: 10px;
+  color: red;
 }
 </style>
