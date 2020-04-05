@@ -1,0 +1,18 @@
+$c = v('color')
+$cb = v('background-color')
+$d = v('depth')
+$dn = n('depth')
+$g = v('gap')
+$gn = n('gap')
+$g2 = n('gap', 2)
+
+$background-color = white
+$color = black
+$depth = 1px
+$gap = 10px
+
+v(x)
+  var(unquote('--bois-' + x), lookup('$' + x))
+
+n(x, n = -1)
+  'calc(%s * %s)' % (n v(x))

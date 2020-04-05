@@ -1,0 +1,18 @@
+button()
+  background-color $cb
+  border 1px solid $c
+  color $c
+  cursor pointer
+  padding $g
+  transition()
+  hover-shadow()
+
+hover-shadow()
+  transition()
+  @media (hover: hover)
+    &:hover
+      transform translate($dn, $dn)
+      box-shadow $d $d $c
+
+transition()
+  transition all 75ms ease-out

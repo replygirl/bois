@@ -3,7 +3,8 @@ module.exports = {
     'style-resources-loader': {
       preProcessor: 'stylus',
       patterns: [
-        './src/styles/imports.styl'
+        './src/styles/mixins.styl',
+        './src/styles/variables.styl'
       ]
     }
   }

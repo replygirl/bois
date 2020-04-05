@@ -1,6 +1,17 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '@/views/Home.vue'
-import Component from '@/views/Component.vue'
+import { createRouter, createWebHistory} from 'vue-router'
+import {
+  Home,
+  Button,
+  Nav
+} from '@/views'
+
+import type { RouteRecord } from 'vue-router'
+
+const componentRoutes = (routes: RouteRecord[]): RouteRecord[] =>
+  routes.map((r: RouteRecord): RouteRecord => ({
+    ...r,
+    path: `/components/${r.path}`
+  }))
 
 export default createRouter({
   history: createWebHistory(),
@@ -9,10 +20,15 @@ export default createRouter({
       path: '/',
       component: Home
     },
-    {
-      path: '/:component',
-      component: Component,
-      props: true
-    }
+    ...componentRoutes([
+      {
+        path: 'button',
+        component: Button
+      },
+      {
+        path: 'nav',
+        component: Nav
+      }
+    ])
   ]
 })
