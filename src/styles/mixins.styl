@@ -1,10 +1,10 @@
 active-depression(currentBorder)
   transition()
   &:active
-    border-top-width cab($d, '+', currentBorder) solid $c
-    border-left-width cab($d, '+', currentBorder) solid $c
+    border-top-width cab($d, '+', currentBorder)
+    border-left-width cab($d, '+', currentBorder)
     box-shadow none
-    padding $g $gm $gm $g
+    padding $g cab($g, '-', $d) cab($g, '-', $d) $g
     transform translate(0, 0)
     z-index -1
 
