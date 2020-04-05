@@ -13,8 +13,11 @@ $color = v('color', black)
 $depth = v('depth', 1px)
 $gap = v('gap', 10px)
 
-ca(val, calcFnString)
-  unquote('calc(%s %s)' % (val unquote(calcFnString)))
+ca(a, opAndBString)
+  unquote('calc(%s %s)' % (a unquote(opAndBString)))
+
+cab(a, opString, b)
+  unquote('calc(%s %s %s)' % (a unquote(opString) b))
 
 v(name, val)
   var(unquote('--bois-' + name), val)

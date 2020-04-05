@@ -1,26 +1,29 @@
+active-depression(currentBorder)
+  transition()
+  &:active
+    border-top-width cab($d, '+', currentBorder) solid $c
+    border-left-width cab($d, '+', currentBorder) solid $c
+    box-shadow none
+    padding $g $gm $gm $g
+    transform translate(0, 0)
+    z-index -1
+
 button()
+  hover-shadow()
+  active-depression(currentBorder: 1px)
   background-color $cb
   border 1px solid $c
   color $c
   cursor pointer
   padding $g
-  hover-shadow()
-  &:active
-    border-top 2px solid $c
-    border-left 2px solid $c
 
 hover-shadow()
   transition()
   @media (hover: hover)
     &:hover
-      z-index 1
       box-shadow $d $d $c
       transform translate($dn, $dn)
-  &:active
-    z-index -1
-    box-shadow none
-    padding $g $gm $gm $g
-    transform translate(0, 0)
+      z-index 1
 
 transition()
   transition all 75ms ease-out
