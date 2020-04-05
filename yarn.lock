@@ -3010,6 +3010,11 @@ destroy@~1.0.4:
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
   integrity sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
 
+destyle.css@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/destyle.css/-/destyle.css-1.0.11.tgz#46391a267a641c7a5cef8dfe766784982f52c557"
+  integrity sha512-BmI0mIqho8BQpdhylMTK0wkfeHs+z7J9U/Cri8Cf0W8odyLiuFUIXo3vlArEjUzIDKrVjQZz1xvXu8M2Nvfy2g==
+
 detect-node@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/detect-node/-/detect-node-2.0.4.tgz#014ee8f8f669c5c58023da64b8179c083a28c46c"

@@ -1,11 +1,11 @@
-<template>
-  <button class='button is-primary' @click='onClick'>
-    <slot></slot>
-  </button>
+<template lang='pug'>
+button.bois-button(@click='onClick')
+  slot
 </template>
 
 <script lang='ts'>
 import { defineComponent } from 'vue'
+import 'destyle.css'
 
 export default defineComponent({
   onClick() {
