@@ -1,7 +1,7 @@
 <template lang='pug'>
-a(v-if='isUrl' :href='linkable.href')
+a.bois-a(v-if='isUrl' :href='linkable.href')
   slot
-router-link(v-else :to='linkable.to')
+router-link.bois-router-link(v-else :to='linkable.to')
   slot
 </template>
 

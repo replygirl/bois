@@ -1,29 +1,31 @@
 <template lang='pug'>
-Nav(v-bind='{ title, links }')
 main
   p the bois are ui components
+  Nav(:links='componentRoutes')
+    p: i Check em out:
 </template>
 
 <script lang='ts'>
 import { defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
 import { Nav } from '@/components'
+
+import type { RouteRecord } from 'vue-router'
+import type { Named, NamedRouterLinkable } from '@/types'
 
 export default defineComponent({
   components: {
     Nav
   },
-  data() {
+  setup() {
+    const componentRoutes = useRouter()
+      .getRoutes()
+      .filter(({ path }: RouteRecord) => path.startsWith('/components/'))
+      .map(({ name, path }: Named<RouteRecord>): NamedRouterLinkable => ({ name, to: path }))
+
     return {
-      title: { name: 'Bois', to: '/' },
-      links: [
-        { name: 'GitHub', href: 'https://github.com/replygirl/bois' }
-      ]
+      componentRoutes
     }
   }
 })
 </script>
-
-<style scoped lang='stylus'>
-main
-  padding $g4 $g2
-</style>

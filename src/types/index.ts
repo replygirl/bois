@@ -4,8 +4,8 @@ type XOR<T, U> =
     ? (Without<T, U> & U) | (Without<U, T> & T)
     : T | U
 
-type Nameable<T> = T & { name?: string }
-type Named<T> = T & { name: string }
+export type Nameable<T> = T & { name?: string }
+export type Named<T> = T & { name: string }
 
 interface BaseAnchorLinkable { href: string }
 export type AnchorLinkable = Nameable<BaseAnchorLinkable>

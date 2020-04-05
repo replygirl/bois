@@ -1,5 +1,5 @@
 export { default as Home } from './Home.vue'
 
-// components
+// Component views
 export { default as Button } from './Button.vue'
-export { default as Nav } from './Nav.vue'
+export { default as NavHeader } from './NavHeader.vue'

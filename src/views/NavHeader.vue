@@ -1,16 +1,17 @@
 <template lang='pug'>
-#app
+Component(:name='$options.name')
   NavHeader(v-bind='navHeaderProps')
-  router-view
 </template>
 
-<script>
+<script lang='ts'>
 import { defineComponent } from 'vue'
+import { Component } from '@/layouts'
 import { NavHeader } from '@/components'
-import 'destyle.css'
 
 export default defineComponent({
+  name: 'NavHeader',
   components: {
+    Component,
     NavHeader
   },
   data() {
@@ -19,24 +20,11 @@ export default defineComponent({
         title: { name: 'Bois', to: '/' },
         subtitle: 'Chill components',
         links: [
-          { name: 'GitHub', href: 'https://github.com/replygirl/bois' }
+          { name: 'Buttons', to: '/components/button' },
+          { name: 'Google', href: 'https://google.com' }
         ]
       }
     }
   }
 })
 </script>
-
-<style lang='stylus'>
-:root
-  --bois-background-color-page cornsilk
-  background-color $cbp
-
-#app
-  font-family 'IBM Plex Mono', monospace
-
-main
-  padding $g4 $g2
-  > * + *
-    margin-top $g4
-</style>

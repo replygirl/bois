@@ -2,7 +2,7 @@ import { createRouter, createWebHistory} from 'vue-router'
 import {
   Home,
   Button,
-  Nav
+  NavHeader
 } from '@/views'
 
 import type { RouteRecord } from 'vue-router'
@@ -22,12 +22,14 @@ export default createRouter({
     },
     ...componentRoutes([
       {
+        name: 'Button',
         path: 'button',
         component: Button
       },
       {
-        path: 'nav',
-        component: Nav
+        name: 'NavHeader',
+        path: 'nav-header',
+        component: NavHeader
       }
     ])
   ]
