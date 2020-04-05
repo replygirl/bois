@@ -14,15 +14,12 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
-button {
-  border: 1px solid #eee;
-  border-radius: 3px;
-  background-color: #ffffff;
-  cursor: pointer;
-  font-size: 15pt;
-  padding: 3px 10px;
-  margin: 10px;
-  color: red;
-}
+<style scoped lang='stylus'>
+button
+  border 1px solid v(color)
+  color v(color)
+  cursor pointer
+  font-size inherit
+  line-height inherit
+  padding 10px
 </style>
