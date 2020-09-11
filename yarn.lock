@@ -8611,11 +8611,12 @@ vue-cli-plugin-style-resources-loader@~0.1.4:
   resolved "https://registry.yarnpkg.com/vue-cli-plugin-style-resources-loader/-/vue-cli-plugin-style-resources-loader-0.1.4.tgz#6087a86132ea8125aa89e5f8e0a978fbc8cf6f59"
   integrity sha512-aK2TyVThZO6oVPZJpCckha8ALcg1RXKYLNqtuy1fNv+24x6zGWKpSK+FHAo47B7yeRlFS9DbKo+cvUFMqWaZ7Q==
 
-vue-cli-plugin-vue-next@~0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/vue-cli-plugin-vue-next/-/vue-cli-plugin-vue-next-0.1.3.tgz#fe4b99425d5269e024a87ccfd4bd8b367d89dbf5"
-  integrity sha512-/VRfs2kwRMw5fI/FBcT8y0eO3KGfxjwrunOkQTweywJKB9ac1HRM/NpeWPj+zR1K5fvdfnXoya4kSvtOtKZmFA==
+vue-cli-plugin-vue-next@~0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/vue-cli-plugin-vue-next/-/vue-cli-plugin-vue-next-0.1.4.tgz#8173186aedb65a7e9fe80889a9c44b023544dd9f"
+  integrity sha512-uSr/2c+enS7Ps5Qu54dOno+oTY69LXJCzksiqoSDE2bdxiqlkFjeayrMKV7GOeYNnmqEpExhZ2ZT0359la/wSA==
   dependencies:
+    chalk "^4.1.0"
     vue-loader "^16.0.0-alpha.3"
 
 vue-hot-reload-api@^2.3.0:
